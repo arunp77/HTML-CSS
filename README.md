@@ -19,7 +19,7 @@ Getting Started
 
 To get started, simply choose the template that best fits your needs and follow the instructions provided in its respective directory. You can customize the templates by modifying the HTML, CSS, and JavaScript files to match your branding and content. Additionally, refer to the documentation for each template to learn more about its features and customization options.
 
-We hope that these templates serve as a valuable resource for your website design projects. Feel free to explore and experiment with them to create visually impressive and functional websites. If you have any questions or feedback, please don't hesitate to reach out.
+I hope that these templates serve as a valuable resource for your website design projects. Feel free to explore and experiment with them to create visually impressive and functional websites. If you have any questions or feedback, please don't hesitate to reach out.
 
 Happy designing!
 
