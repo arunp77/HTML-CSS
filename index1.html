@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My webpage</title>
+  <style>
+
+    body {
+       margin: 0;
+       padding: 0;
+       background-color: #87ceeb; /* Light sky blue */
+       background-image: linear-gradient(to bottom right, #87ceeb, #ffffff); /* Gradient from light sky blue to white */
+     }    
+
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: transparent;
+    }
+
+    .navbar li {
+      float: none;
+      display: inline-block;
+    }
+
+    .navbar li a {
+      display: block;
+      padding: 16px;
+      text-decoration: none;
+      color: black;
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar li a:hover {
+      background-color: #f9f9f9;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      transition: background-color 0.3s ease;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: red;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-left: 10px;
+    }
+
+    .profile-image {
+      width: 250px; /* Adjust the width as needed */
+      height: auto; /* Adjust the height as needed */
+      border-radius: 15%; /* To create a circular image */
+      margin-left: auto;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .profile-image:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Customize the box shadow effect */
+    }
+
+    #typing-text {
+      font-size: 24px;
+      margin-left: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 0.15em solid #000; /* Cursor style */
+      animation: typing 3s steps(40, end), blink-caret 0.5s step-end infinite;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 300px; /* Adjust the width as needed */
+      }
+    }
+
+    @keyframes blink-caret {
+      from, to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: #000;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul class="navbar">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Social</a>
+        <div class="dropdown-content">
+          <a href="https://www.facebook.com/">Facebook</a>
+          <a href="https://linkedin.com/">LinkedIn</a>
+          <a href="https://twitter.com/">Twitter</a>
+          <a href="https://github.com/">GitHub</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+ 
+  <!-- Rest of the website content goes here -->
+  <div class="header-container">
+    <h1>Hi! This is "Your name",</h1>
+    </br>
+    <p id="typing-text">I am a</p>
+    <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60" alt="Your Image" class="profile-image">
+  </div>
+
+  <section id="home">
+    <!-- Home section content here -->
+  </section>
+
+  <section id="projects">
+    <!-- Projects section content here -->
+  </section>
+
+  <section id="contact">
+    <!-- Contact section content here -->
+  </section>
+
+  <script>
+    const typingTextElement = document.getElementById("typing-text");
+    const roles = ["Freelance consultant", "Data Science enthusiast", "Web Developer", "Content Writer"];
+    let roleIndex = 0;
+
+    function changeRole() {
+      typingTextElement.textContent = "I am a " + roles[roleIndex];
+      roleIndex = (roleIndex + 1) % roles.length;
+    }
+
+    setInterval(changeRole, 2000); // Change role every 2.5 seconds
+  </script>
+</body>
+</html>
+
